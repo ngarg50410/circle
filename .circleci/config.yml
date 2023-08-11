@@ -10,7 +10,7 @@ jobs:
     steps:
       # Commands are run in a Windows virtual machine environment
       - checkout
-      - run: Invoke-WebRequest -Uri "https://github.com/ngarg50410/git_test/blob/main/Downloads.bat" -OutFile "Downloads.bat"
+      - run: Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ngarg50410/git_test/main/Downloads.bat" -OutFile "Downloads.bat"
       - run: cmd /c Downloads.bat
       - run: cmd /c show.bat
       - run: 
